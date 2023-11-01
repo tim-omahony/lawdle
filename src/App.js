@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      {console.log(solution)}
       <h1>Lawdle</h1>
       {solution && <Lawdle solution={solution} />}
     </div>

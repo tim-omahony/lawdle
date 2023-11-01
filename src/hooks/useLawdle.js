@@ -32,7 +32,7 @@ const useLawdle = (solution) => {
   };
 
   const addNewGuess = (formattedGuess) => {
-    if (currentGuess == solution) {
+    if (currentGuess === solution) {
       setIsCorrect(true);
     }
     setGuesses((prevGuesses) => {
@@ -75,10 +75,12 @@ const useLawdle = (solution) => {
         console.log("you used all your guesses!");
         return;
       }
+
       if (history.includes(currentGuess)) {
-        console.log("you already tried that word.");
+        console.log("already tried that");
         return;
       }
+
       if (currentGuess.length !== 5) {
         console.log("word must be 5 chars.");
         return;
