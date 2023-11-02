@@ -72,17 +72,17 @@ const useLawdle = (solution) => {
   const handleKeyup = ({ key }) => {
     if (key === "Enter") {
       if (turn > 5) {
-        console.log("you used all your guesses!");
+        console.log("fuck you doing lud");
         return;
       }
 
       if (history.includes(currentGuess)) {
-        console.log("already tried that");
+        console.log("already tried that kid");
         return;
       }
 
       if (currentGuess.length !== 5) {
-        console.log("word must be 5 chars.");
+        console.log("how did you even do this?");
         return;
       }
       const formatted = formatGuess();
