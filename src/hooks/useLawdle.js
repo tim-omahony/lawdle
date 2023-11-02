@@ -35,17 +35,21 @@ const useLawdle = (solution) => {
     if (currentGuess === solution) {
       setIsCorrect(true);
     }
+
     setGuesses((prevGuesses) => {
       let newGuesses = [...prevGuesses];
       newGuesses[turn] = formattedGuess;
       return newGuesses;
     });
+
     setHistory((prevHistory) => {
       return [...prevHistory, currentGuess];
     });
+
     setTurn((prevTurn) => {
       return prevTurn + 1;
     });
+
     setUsedKeys((prevUsedKeys) => {
       formattedGuess.forEach((l) => {
         const currentColor = prevUsedKeys[l.key];
@@ -87,7 +91,6 @@ const useLawdle = (solution) => {
       }
       const formatted = formatGuess();
       addNewGuess(formatted);
-      console.log(formatted);
     }
     if (key === "Backspace") {
       setCurrentGuess((prev) => prev.slice(0, -1));

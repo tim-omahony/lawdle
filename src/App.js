@@ -10,12 +10,12 @@ function App() {
       .then((json) => {
         const randomSolution = json[Math.floor(Math.random() * json.length)];
         setSolution(randomSolution.word);
+        console.log(randomSolution.word);
       });
   }, [setSolution]);
 
   return (
     <div className="App">
-      {console.log(solution)}
       <h1>Lawdle</h1>
       {solution && <Lawdle solution={solution} />}
     </div>
